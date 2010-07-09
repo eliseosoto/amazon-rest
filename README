@@ -1,0 +1,9 @@
+Very first version!
+
+
+If you want to run the tests then you need to create the file
+/amazon-rest/src/main/resources/awseCommerceService.properties with the following info:
+
+awse.endpoint=ecs.amazonaws.com
+awse.awsAccessKeyId=<Your Access Key Id>
+awse.awsSecretKey=<Your Secret Key>
