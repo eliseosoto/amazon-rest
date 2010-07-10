@@ -10,7 +10,6 @@ import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.EndElement;
-import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 import javax.xml.transform.stream.StreamSource;
 
@@ -21,6 +20,9 @@ import org.springframework.web.client.RestTemplate;
 
 import com.supervaca.amazonrest.SignedRequestsHelper;
 import com.supervaca.amazonrest.domain.Item;
+import com.supervaca.amazonrest.domain.Merchant;
+import com.supervaca.amazonrest.domain.Offer;
+import com.supervaca.amazonrest.domain.Offers;
 
 public class ItemDaoRest implements ItemDao {
 	private static final Logger logger = LoggerFactory.getLogger(ItemDaoRest.class);
@@ -61,6 +63,7 @@ public class ItemDaoRest implements ItemDao {
 
 		StreamSource xmlStream = submitRequest(url);
 
+		long start = System.currentTimeMillis();
 		// First create a new XMLInputFactory
 		XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 		// Setup a new eventReader
@@ -71,23 +74,67 @@ public class ItemDaoRest implements ItemDao {
 			while (eventReader.hasNext()) {
 				XMLEvent event = eventReader.nextEvent();
 
-				if (event.isStartElement()) {
-					StartElement startElement = event.asStartElement();
-					if (startElement.getName().getLocalPart().equals("Item")) {
-						logger.debug(startElement.toString());
-					}
+				if (isStartElementEqual(event, "Item")) {
+					logger.debug(event.toString());
 				}
 
-				if (event.isStartElement() && event.asStartElement().getName().getLocalPart().equals("ASIN")) {
+				if (isStartElementEqual(event, "ASIN")) {
 					event = eventReader.nextEvent();
 					item.setAsin(event.asCharacters().getData());
 					continue;
 				}
-				
-				if (event.isStartElement() && event.asStartElement().getName().getLocalPart().equals("DetailPageURL")) {
+
+				if (isStartElementEqual(event, "DetailPageURL")) {
 					event = eventReader.nextEvent();
 					item.setDetailPageURL(event.asCharacters().getData());
 					continue;
+				}
+
+				if (isStartElementEqual(event, "Offers")) {
+					Offers offers = new Offers();
+					while (eventReader.hasNext() && !(isEndElementEqual(eventReader.peek(), "Offers"))) {
+						event = eventReader.nextEvent();
+
+						if (isStartElementEqual(event, "TotalOffers")) {
+							event = eventReader.nextEvent();
+							offers.setTotalOffers(Integer.valueOf(event.asCharacters().getData()));
+							continue;
+						}
+
+						if (isStartElementEqual(event, "TotalOfferPages")) {
+							event = eventReader.nextEvent();
+							offers.setTotalOfferPages(Integer.valueOf(event.asCharacters().getData()));
+							continue;
+						}
+
+						if (isStartElementEqual(event, "Offer")) {
+							Offer offer = new Offer();
+							while (eventReader.hasNext() && !(isEndElementEqual(eventReader.peek(), "Offer"))) {
+								event = eventReader.nextEvent();
+
+								if (isStartElementEqual(event, "Merchant")) {
+									Merchant merchant = new Merchant();
+									while (eventReader.hasNext() && !(isEndElementEqual(eventReader.peek(), "Merchant"))) {
+										event = eventReader.nextEvent();
+										if (isStartElementEqual(event, "MerchantId")) {
+											event = eventReader.nextEvent();
+											merchant.setMerchantId(event.asCharacters().getData());
+											continue;
+										}
+
+										if (isStartElementEqual(event, "GlancePage")) {
+											event = eventReader.nextEvent();
+											merchant.setGlancePage(event.asCharacters().getData());
+											continue;
+										}
+									}
+									offer.setMerchant(merchant);
+								}
+							}
+							offers.getOffers().add(offer);
+						}
+					}
+					item.setOffers(offers);
 				}
 
 				// If we reach the end of an item element we add it to the list
@@ -99,11 +146,21 @@ public class ItemDaoRest implements ItemDao {
 				}
 			}
 		} catch (XMLStreamException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.error("XMLStream error", e);
 		}
+		long end = System.currentTimeMillis();
+
+		logger.debug("Parsing took {} millis", end - start);
 
 		return item;
+	}
+
+	private boolean isStartElementEqual(XMLEvent event, String startElement) {
+		return event.isStartElement() && event.asStartElement().getName().getLocalPart().equals(startElement);
+	}
+
+	private boolean isEndElementEqual(XMLEvent event, String endElement) {
+		return event.isEndElement() && event.asEndElement().getName().getLocalPart().equals(endElement);
 	}
 
 	private StreamSource submitRequest(String url) {
