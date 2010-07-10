@@ -25,7 +25,6 @@ import org.springframework.web.client.RestTemplate;
 @ContextConfiguration( { "/applicationContext.xml" })
 public class SignedRequestsHelperIntegrationTest extends AbstractJUnit4SpringContextTests {
 	private static final Logger logger = LoggerFactory.getLogger(SignedRequestsHelperIntegrationTest.class);
-
 	private static SignedRequestsHelper helper;
 
 	@Test

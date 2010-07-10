@@ -20,4 +20,6 @@
 			</list>
 		</property>
 	</bean>
+	
+	<bean class="com.supervaca.amazonrest.dao.ItemDaoRest" />
 </beans>
