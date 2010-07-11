@@ -10,9 +10,11 @@ import javax.xml.stream.events.XMLEvent;
 import javax.xml.transform.stream.StreamSource;
 
 import com.supervaca.amazonrest.domain.Item;
+import com.supervaca.amazonrest.domain.ItemAttributes;
 import com.supervaca.amazonrest.domain.Merchant;
 import com.supervaca.amazonrest.domain.Offer;
 import com.supervaca.amazonrest.domain.OfferListing;
+import com.supervaca.amazonrest.domain.OfferSummary;
 import com.supervaca.amazonrest.domain.Offers;
 import com.supervaca.amazonrest.domain.Price;
 
@@ -60,6 +62,17 @@ public class AmazonUnmarshaller {
 				continue;
 			}
 
+			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "ItemAttributes")) {
+				ItemAttributes itemAttributes = AmazonUnmarshaller.unmarshalItemAttributes(eventReader);
+				;
+				item.setItemAttributes(itemAttributes);
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "OfferSummary")) {
+				OfferSummary offerSummary = AmazonUnmarshaller.unmarshalOfferSummary(eventReader);
+				item.setOfferSummary(offerSummary);
+			}
+
 			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "Offers")) {
 				Offers offers = AmazonUnmarshaller.unmarshalOffers(eventReader);
 				item.setOffers(offers);
@@ -69,22 +82,82 @@ public class AmazonUnmarshaller {
 		return retVal;
 	}
 
-	public static OfferListing unmarshalOfferListing(XMLEventReader eventReader) throws XMLStreamException {
-		OfferListing offerListing = new OfferListing();
-		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), "OfferListing"))) {
-			XMLEvent offerListingevent = eventReader.nextEvent();
-			if (AmazonUnmarshaller.isStartElementEqual(offerListingevent, "OfferListingId")) {
-				offerListingevent = eventReader.nextEvent();
-				offerListing.setOfferListingId(offerListingevent.asCharacters().getData());
+	public static ItemAttributes unmarshalItemAttributes(XMLEventReader eventReader) throws XMLStreamException {
+		ItemAttributes itemAttributes = new ItemAttributes();
+		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), "ItemAttributes"))) {
+			XMLEvent itemAttributesEvent = eventReader.nextEvent();
+
+			if (AmazonUnmarshaller.isStartElementEqual(itemAttributesEvent, "Title")) {
+				itemAttributesEvent = eventReader.nextEvent();
+				itemAttributes.setTitle(itemAttributesEvent.asCharacters().getData());
 				continue;
 			}
 
-			if (AmazonUnmarshaller.isStartElementEqual(offerListingevent, "Price")) {
-				Price price = AmazonUnmarshaller.unmarshalPrice(eventReader);
-				offerListing.setPrice(price);
+			if (AmazonUnmarshaller.isStartElementEqual(itemAttributesEvent, "UPC")) {
+				itemAttributesEvent = eventReader.nextEvent();
+				itemAttributes.setUpc(itemAttributesEvent.asCharacters().getData());
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(itemAttributesEvent, "ListPrice")) {
+				Price listPrice = AmazonUnmarshaller.unmarshalPrice(eventReader, "ListPrice");
+				itemAttributes.setListPrice(listPrice);
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(itemAttributesEvent, "TradeInValue")) {
+				Price tradeInValue = AmazonUnmarshaller.unmarshalPrice(eventReader, "TradeInValue");
+				itemAttributes.setTradeInValue(tradeInValue);
+			}
+
+		}
+		return itemAttributes;
+	}
+
+	public static OfferSummary unmarshalOfferSummary(XMLEventReader eventReader) throws XMLStreamException {
+		OfferSummary offerSummary = new OfferSummary();
+		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), "OfferSummary"))) {
+			XMLEvent offerSummaryEvent = eventReader.nextEvent();
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerSummaryEvent, "LowestNewPrice")) {
+				Price lowestNewPrice = AmazonUnmarshaller.unmarshalPrice(eventReader, "LowestNewPrice");
+				offerSummary.setLowestNewPrice(lowestNewPrice);
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerSummaryEvent, "LowestUsedPrice")) {
+				Price lowestUsedPrice = AmazonUnmarshaller.unmarshalPrice(eventReader, "LowestUsedPrice");
+				offerSummary.setLowestUsedPrice(lowestUsedPrice);
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerSummaryEvent, "LowestCollectiblePrice")) {
+				Price lowestCollectiblePrice = AmazonUnmarshaller.unmarshalPrice(eventReader, "LowestCollectiblePrice");
+				offerSummary.setLowestCollectiblePrice(lowestCollectiblePrice);
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerSummaryEvent, "TotalNew")) {
+				offerSummaryEvent = eventReader.nextEvent();
+				offerSummary.setTotalNew(Integer.valueOf(offerSummaryEvent.asCharacters().getData()));
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerSummaryEvent, "TotalUsed")) {
+				offerSummaryEvent = eventReader.nextEvent();
+				offerSummary.setTotalUsed(Integer.valueOf(offerSummaryEvent.asCharacters().getData()));
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerSummaryEvent, "TotalCollectible")) {
+				offerSummaryEvent = eventReader.nextEvent();
+				offerSummary.setTotalCollectible(Integer.valueOf(offerSummaryEvent.asCharacters().getData()));
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerSummaryEvent, "TotalRefurbished")) {
+				offerSummaryEvent = eventReader.nextEvent();
+				offerSummary.setTotalRefurbished(Integer.valueOf(offerSummaryEvent.asCharacters().getData()));
+				continue;
 			}
 		}
-		return offerListing;
+		return offerSummary;
 	}
 
 	public static Offers unmarshalOffers(XMLEventReader eventReader) throws XMLStreamException {
@@ -110,6 +183,24 @@ public class AmazonUnmarshaller {
 			}
 		}
 		return offers;
+	}
+
+	public static OfferListing unmarshalOfferListing(XMLEventReader eventReader) throws XMLStreamException {
+		OfferListing offerListing = new OfferListing();
+		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), "OfferListing"))) {
+			XMLEvent offerListingEvent = eventReader.nextEvent();
+			if (AmazonUnmarshaller.isStartElementEqual(offerListingEvent, "OfferListingId")) {
+				offerListingEvent = eventReader.nextEvent();
+				offerListing.setOfferListingId(offerListingEvent.asCharacters().getData());
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(offerListingEvent, "Price")) {
+				Price price = AmazonUnmarshaller.unmarshalPrice(eventReader, "Price");
+				offerListing.setPrice(price);
+			}
+		}
+		return offerListing;
 	}
 
 	public static Offer unmarshalOffer(XMLEventReader eventReader) throws XMLStreamException {
@@ -149,9 +240,9 @@ public class AmazonUnmarshaller {
 		return merchant;
 	}
 
-	public static Price unmarshalPrice(XMLEventReader eventReader) throws XMLStreamException {
+	public static Price unmarshalPrice(XMLEventReader eventReader, String priceName) throws XMLStreamException {
 		Price price = new Price();
-		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), "Price"))) {
+		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), priceName))) {
 			XMLEvent priceEvent = eventReader.nextEvent();
 
 			if (AmazonUnmarshaller.isStartElementEqual(priceEvent, "Amount")) {

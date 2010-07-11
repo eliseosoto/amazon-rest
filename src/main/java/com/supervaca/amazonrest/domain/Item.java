@@ -1,9 +1,10 @@
 package com.supervaca.amazonrest.domain;
 
-
 public class Item {
 	private String asin;
 	private String detailPageURL;
+	private ItemAttributes itemAttributes;
+	private OfferSummary offerSummary;
 	private Offers offers;
 
 	public String getAsin() {
@@ -22,6 +23,22 @@ public class Item {
 		this.detailPageURL = detailPageURL;
 	}
 
+	public ItemAttributes getItemAttributes() {
+		return itemAttributes;
+	}
+
+	public void setItemAttributes(ItemAttributes itemAttributes) {
+		this.itemAttributes = itemAttributes;
+	}
+
+	public OfferSummary getOfferSummary() {
+		return offerSummary;
+	}
+
+	public void setOfferSummary(OfferSummary offerSummary) {
+		this.offerSummary = offerSummary;
+	}
+
 	public Offers getOffers() {
 		return offers;
 	}
@@ -33,10 +50,8 @@ public class Item {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Item [asin=").append(asin).append(", detailPageURL=").append(detailPageURL).append(", offers=").append(offers).append("]");
+		builder.append("Item [asin=").append(asin).append(", detailPageURL=").append(detailPageURL).append(", itemAttributes=").append(itemAttributes).append(", offerSummary=").append(offerSummary)
+				.append(", offers=").append(offers).append("]");
 		return builder.toString();
 	}
-
-
-	
 }
