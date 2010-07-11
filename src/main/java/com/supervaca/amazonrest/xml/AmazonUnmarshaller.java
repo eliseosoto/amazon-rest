@@ -1,6 +1,8 @@
 package com.supervaca.amazonrest.xml;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.xml.stream.FactoryConfigurationError;
 import javax.xml.stream.XMLEventReader;
@@ -84,6 +86,8 @@ public class AmazonUnmarshaller {
 
 	public static ItemAttributes unmarshalItemAttributes(XMLEventReader eventReader) throws XMLStreamException {
 		ItemAttributes itemAttributes = new ItemAttributes();
+		List<String> features = new ArrayList<String>();
+		itemAttributes.setFeatures(features);
 		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), "ItemAttributes"))) {
 			XMLEvent itemAttributesEvent = eventReader.nextEvent();
 
@@ -109,6 +113,11 @@ public class AmazonUnmarshaller {
 				itemAttributes.setTradeInValue(tradeInValue);
 			}
 
+			if (AmazonUnmarshaller.isStartElementEqual(itemAttributesEvent, "Feature")) {
+				itemAttributesEvent = eventReader.nextEvent();
+				features.add(itemAttributesEvent.asCharacters().getData());
+				continue;
+			}
 		}
 		return itemAttributes;
 	}
