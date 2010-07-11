@@ -45,6 +45,23 @@ public class AmazonUnmarshaller {
 		}
 		return retVal;
 	}
+	
+	public static List<Item> unmarshalMultiItemLookup(StreamSource xmlStream) throws FactoryConfigurationError, XMLStreamException {
+		XMLEventReader eventReader;
+		XMLInputFactory inputFactory = XMLInputFactory.newInstance();
+		eventReader = inputFactory.createXMLEventReader(xmlStream);
+		List<Item> items = new ArrayList<Item>();
+		// Read the XML document
+		while (eventReader.hasNext()) {
+			XMLEvent event = eventReader.nextEvent();
+
+			if (AmazonUnmarshaller.isStartElementEqual(event, "Item")) {
+				items.add(AmazonUnmarshaller.unmarshalItem(eventReader));
+				break;
+			}
+		}
+		return items;
+	}
 
 	public static Item unmarshalItem(XMLEventReader eventReader) throws XMLStreamException {
 		Item retVal;

@@ -31,7 +31,16 @@ public interface ItemDao {
 	 * @return
 	 */
 	Item lookup(String asin, List<String> responseGroups);
-	
+
+	/**
+	 * Returns the Item data for the given ASIN and the specified Response
+	 * Groups, can decide if you only want products sold by Amazon
+	 * 
+	 * @param asin
+	 * @param responseGroups
+	 * @param amazonOnly
+	 * @return
+	 */
 	Item lookup(String asin, List<String> responseGroups, Boolean amazonOnly);
 
 	/**
@@ -41,7 +50,7 @@ public interface ItemDao {
 	 *            Collection of valid ASINs
 	 * @return
 	 */
-	List<Item> getItems(List<String> asins);
+	List<Item> multiLookup(List<String> asins);
 
 	/**
 	 * Gets the Item data for several ASINs at once and the specified Response
@@ -51,7 +60,18 @@ public interface ItemDao {
 	 * @param responseGroups
 	 * @return
 	 */
-	List<Item> getItems(List<String> asins, List<String> responseGroups);
+	List<Item> multiLookup(List<String> asins, List<String> responseGroups);
+
+	/**
+	 * Gets the Item data for several ASINs at once and the specified Response
+	 * Groups, , can decide if you only want products sold by Amazon
+	 * 
+	 * @param asins
+	 * @param responseGroups
+	 * @param amazonOnly
+	 * @return
+	 */
+	List<Item> multiLookup(List<String> asins, List<String> responseGroups, Boolean amazonOnly);
 
 	/**
 	 * Searches items by keyword in all categories.
@@ -90,8 +110,7 @@ public interface ItemDao {
 	 * @param searchIndex
 	 * @return
 	 */
-	List<Item> searchItems(String keywords, List<String> responseGroups,
-			String searchIndex);
+	List<Item> searchItems(String keywords, List<String> responseGroups, String searchIndex);
 
 	/**
 	 * Searches items by keyword in all categories and the specified Search
@@ -104,6 +123,5 @@ public interface ItemDao {
 	 * @param pageNumber
 	 * @return
 	 */
-	Map<String, Object> searchItems(String keywords,
-			List<String> responseGroups, String searchIndex, Integer pageNumber);
+	Map<String, Object> searchItems(String keywords, List<String> responseGroups, String searchIndex, Integer pageNumber);
 }
