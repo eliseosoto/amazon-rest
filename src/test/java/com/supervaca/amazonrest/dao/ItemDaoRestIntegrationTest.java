@@ -19,7 +19,7 @@ import com.supervaca.amazonrest.domain.Item;
 public class ItemDaoRestIntegrationTest extends AbstractJUnit4SpringContextTests {
 	private static final Logger logger = LoggerFactory.getLogger(ItemDaoRestIntegrationTest.class);
 	private ItemDao itemDao;
-	
+
 	@Before
 	public final void before() {
 		itemDao = applicationContext.getBean(ItemDao.class);
@@ -31,11 +31,28 @@ public class ItemDaoRestIntegrationTest extends AbstractJUnit4SpringContextTests
 
 		logger.debug(item.toString());
 	}
-	
+
 	@Test
 	public final void testGetItems() {
-		List<Item> items = itemDao.multiLookup(Arrays.asList(new String[] {"B000ZK9QCS", "B002BSA388"}));
+		List<Item> items = itemDao.multiLookup(Arrays.asList(new String[] { "B000ZK9QCS", "B002BSA388" }));
 
-		logger.debug(items.toString());
+		logger.debug("Found {} items", items.size());
+		for (Item item : items) {
+			logger.debug(item.getItemAttributes().getTitle());
+		}
+	}
+
+	@Test
+	public final void testSearchItems() {
+		List<String> responseGroups = Arrays.asList(new String[] { "ItemAttributes" });
+		SearchItemsResults searchResponse = itemDao.searchItems("ps3", responseGroups, "All", 1, false);
+		
+		List<Item> items = searchResponse.getItems();
+
+		logger.debug("Found {} items", items.size());
+		logger.debug("{} results, {} pages", searchResponse.getTotalResults(), searchResponse.getTotalPages());
+		for (Item item : items) {
+			logger.debug(item.getItemAttributes().getTitle());
+		}
 	}
 }

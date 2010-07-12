@@ -22,6 +22,8 @@ import com.supervaca.amazonrest.domain.Item;
 import com.supervaca.amazonrest.xml.AmazonUnmarshaller;
 
 public class ItemDaoRest implements ItemDao {
+	private static final String API_VERSION = "2009-11-01";
+
 	private static final Logger logger = LoggerFactory.getLogger(ItemDaoRest.class);
 
 	@Autowired
@@ -46,7 +48,7 @@ public class ItemDaoRest implements ItemDao {
 		Map<String, String> params = new TreeMap<String, String>();
 		params.put("IdType", "ASIN");
 		params.put("Condition", "All");
-		params.put("Version", "2009-11-01");
+		params.put("Version", API_VERSION);
 		params.put("Service", "AWSECommerceService");
 		params.put("MerchantId", amazonOnly ? "Amazon" : "All");
 		params.put("Operation", "ItemLookup");
@@ -88,14 +90,14 @@ public class ItemDaoRest implements ItemDao {
 		Map<String, String> params = new TreeMap<String, String>();
 		params.put("IdType", "ASIN");
 		params.put("Condition", "All");
-		params.put("Version", "2009-11-01");
+		params.put("Version", API_VERSION);
 		params.put("Service", "AWSECommerceService");
 		params.put("MerchantId", amazonOnly ? "Amazon" : "All");
 		params.put("Operation", "ItemLookup");
 		params.put("ItemId", join(asins, ","));
 		params.put("ResponseGroup", join(responseGroups, ","));
 		String url = signedRequestsHelper.sign(params);
-
+		
 		StreamSource xmlStream = submitRequest(url);
 
 		long start = System.currentTimeMillis();
@@ -127,21 +129,47 @@ public class ItemDaoRest implements ItemDao {
 	}
 
 	@Override
-	public List<Item> searchItems(String keyword, String searchIndex) {
+	public SearchItemsResults searchItems(String keyword, String searchIndex) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Item> searchItems(String keywords, List<String> responseGroups, String searchIndex) {
+	public SearchItemsResults searchItems(String keywords, List<String> responseGroups, String searchIndex) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Map<String, Object> searchItems(String keywords, List<String> responseGroups, String searchIndex, Integer pageNumber) {
-		// TODO Auto-generated method stub
-		return null;
+	public SearchItemsResults searchItems(String keywords, List<String> responseGroups, String searchIndex, Integer pageNumber, Boolean amazonOnly) {
+		Map<String, String> params = new TreeMap<String, String>();
+		params.put("Operation", "ItemSearch");
+		params.put("SearchIndex", searchIndex);
+		params.put("ResponseGroup", join(responseGroups, ","));
+		params.put("Keywords", keywords);
+		params.put("MerchantId", amazonOnly ? "Amazon" : "All");
+		params.put("ItemPage", pageNumber.toString());
+		params.put("Version", API_VERSION);
+		params.put("Service", "AWSECommerceService");
+		
+		String url = signedRequestsHelper.sign(params);
+		
+		StreamSource xmlStream = submitRequest(url);
+
+		SearchItemsResults searchItemsResults = null;
+		long start = System.currentTimeMillis();
+		// First create a new XMLInputFactory
+		// Setup a new eventReader
+		try {
+			searchItemsResults = AmazonUnmarshaller.unmarshalSearchItems(xmlStream);
+		} catch (XMLStreamException e) {
+			logger.error("XMLStream error", e);
+		}
+		long end = System.currentTimeMillis();
+
+		logger.debug("Parsing took {} millis", end - start);
+
+		return searchItemsResults;
 	}
 
 	private StreamSource submitRequest(String url) {

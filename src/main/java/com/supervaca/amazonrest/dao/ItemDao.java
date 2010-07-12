@@ -1,7 +1,6 @@
 package com.supervaca.amazonrest.dao;
 
 import java.util.List;
-import java.util.Map;
 
 import com.supervaca.amazonrest.domain.Item;
 
@@ -99,7 +98,7 @@ public interface ItemDao {
 	 * @param searchIndex
 	 * @return
 	 */
-	List<Item> searchItems(String keyword, String searchIndex);
+	SearchItemsResults searchItems(String keyword, String searchIndex);
 
 	/**
 	 * Searches items by keyword in all categories and the specified Search
@@ -110,7 +109,7 @@ public interface ItemDao {
 	 * @param searchIndex
 	 * @return
 	 */
-	List<Item> searchItems(String keywords, List<String> responseGroups, String searchIndex);
+	SearchItemsResults searchItems(String keywords, List<String> responseGroups, String searchIndex);
 
 	/**
 	 * Searches items by keyword in all categories and the specified Search
@@ -123,5 +122,5 @@ public interface ItemDao {
 	 * @param pageNumber
 	 * @return
 	 */
-	Map<String, Object> searchItems(String keywords, List<String> responseGroups, String searchIndex, Integer pageNumber);
+	SearchItemsResults searchItems(String keywords, List<String> responseGroups, String searchIndex, Integer pageNumber, Boolean amazonOnly);
 }

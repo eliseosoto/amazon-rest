@@ -11,6 +11,7 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.XMLEvent;
 import javax.xml.transform.stream.StreamSource;
 
+import com.supervaca.amazonrest.dao.SearchItemsResults;
 import com.supervaca.amazonrest.domain.Item;
 import com.supervaca.amazonrest.domain.ItemAttributes;
 import com.supervaca.amazonrest.domain.Merchant;
@@ -57,10 +58,42 @@ public class AmazonUnmarshaller {
 
 			if (AmazonUnmarshaller.isStartElementEqual(event, "Item")) {
 				items.add(AmazonUnmarshaller.unmarshalItem(eventReader));
-				break;
 			}
 		}
 		return items;
+	}
+	
+	public static SearchItemsResults unmarshalSearchItems(StreamSource xmlStream) throws FactoryConfigurationError, XMLStreamException {
+		XMLEventReader eventReader;
+		XMLInputFactory inputFactory = XMLInputFactory.newInstance();
+		eventReader = inputFactory.createXMLEventReader(xmlStream);
+		
+		SearchItemsResults sir = new SearchItemsResults();
+		List<Item> items = new ArrayList<Item>();
+		// Read the XML document
+		while (eventReader.hasNext()) {
+			XMLEvent event = eventReader.nextEvent();
+			
+			if (AmazonUnmarshaller.isStartElementEqual(event, "TotalResults")) {
+				event = eventReader.nextEvent();
+				sir.setTotalResults(Integer.valueOf(event.asCharacters().getData()));
+				continue;
+			}
+			
+			if (AmazonUnmarshaller.isStartElementEqual(event, "TotalPages")) {
+				event = eventReader.nextEvent();
+				sir.setTotalPages(Integer.valueOf(event.asCharacters().getData()));
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(event, "Item")) {
+				items.add(AmazonUnmarshaller.unmarshalItem(eventReader));
+				continue;
+			}
+		}
+		sir.setItems(items);
+		
+		return sir;
 	}
 
 	public static Item unmarshalItem(XMLEventReader eventReader) throws XMLStreamException {
