@@ -46,7 +46,7 @@ public class AmazonUnmarshaller {
 		}
 		return retVal;
 	}
-	
+
 	public static List<Item> unmarshalMultiItemLookup(StreamSource xmlStream) throws FactoryConfigurationError, XMLStreamException {
 		XMLEventReader eventReader;
 		XMLInputFactory inputFactory = XMLInputFactory.newInstance();
@@ -62,24 +62,24 @@ public class AmazonUnmarshaller {
 		}
 		return items;
 	}
-	
+
 	public static SearchItemsResults unmarshalSearchItems(StreamSource xmlStream) throws FactoryConfigurationError, XMLStreamException {
 		XMLEventReader eventReader;
 		XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 		eventReader = inputFactory.createXMLEventReader(xmlStream);
-		
+
 		SearchItemsResults sir = new SearchItemsResults();
 		List<Item> items = new ArrayList<Item>();
 		// Read the XML document
 		while (eventReader.hasNext()) {
 			XMLEvent event = eventReader.nextEvent();
-			
+
 			if (AmazonUnmarshaller.isStartElementEqual(event, "TotalResults")) {
 				event = eventReader.nextEvent();
 				sir.setTotalResults(Integer.valueOf(event.asCharacters().getData()));
 				continue;
 			}
-			
+
 			if (AmazonUnmarshaller.isStartElementEqual(event, "TotalPages")) {
 				event = eventReader.nextEvent();
 				sir.setTotalPages(Integer.valueOf(event.asCharacters().getData()));
@@ -92,7 +92,7 @@ public class AmazonUnmarshaller {
 			}
 		}
 		sir.setItems(items);
-		
+
 		return sir;
 	}
 
@@ -301,12 +301,13 @@ public class AmazonUnmarshaller {
 
 	public static Price unmarshalPrice(XMLEventReader eventReader, String priceName) throws XMLStreamException {
 		Price price = new Price();
-		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), priceName))) {
+		Long amount = -1L;
+		while (eventReader.hasNext()) {
 			XMLEvent priceEvent = eventReader.nextEvent();
 
 			if (AmazonUnmarshaller.isStartElementEqual(priceEvent, "Amount")) {
 				priceEvent = eventReader.nextEvent();
-				Long amount = Long.valueOf(priceEvent.asCharacters().getData());
+				amount = Long.valueOf(priceEvent.asCharacters().getData());
 				price.setAmount(amount);
 				price.setBdAmount(BigDecimal.valueOf(amount).divide(BigDecimal.valueOf(100)));
 				continue;
@@ -322,6 +323,15 @@ public class AmazonUnmarshaller {
 				priceEvent = eventReader.nextEvent();
 				price.setFormattedPrice(priceEvent.asCharacters().getData());
 				continue;
+			}
+
+			// If we reach the end tag and there's no amount set then it must be a "Too Low to Display"
+			if (AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), priceName)) {
+				if (amount == -1L) {
+					price.setAmount(amount);
+					price.setBdAmount(BigDecimal.valueOf(amount));
+				}
+				break;
 			}
 		}
 		return price;

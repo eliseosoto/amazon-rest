@@ -31,6 +31,20 @@ public class ItemDaoRestIntegrationTest extends AbstractJUnit4SpringContextTests
 
 		logger.debug(item.toString());
 	}
+	
+	@Test
+	public final void testNoPrice() {
+		Item item = itemDao.lookup("B000PMLFRA", Arrays.asList(new String[] { "ItemAttributes", "Offers", "OfferSummary" }), true);
+
+		logger.debug(item.toString());
+	}
+	
+	@Test
+	public final void testCantShowPrice() {
+		Item item = itemDao.lookup("B0036WT4KG", Arrays.asList(new String[] { "ItemAttributes", "Offers", "OfferSummary" }), true);
+
+		logger.debug(item.toString());
+	}
 
 	@Test
 	public final void testGetItems() {

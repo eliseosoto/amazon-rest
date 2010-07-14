@@ -36,7 +36,7 @@ public class SignedRequestsHelperIntegrationTest extends AbstractJUnit4SpringCon
 		Map<String, String> params = new TreeMap<String, String>();
 		params.put("Service", "AWSECommerceService");
 		params.put("Operation", "ItemLookup");
-		params.put("ItemId", "0679722769");
+		params.put("ItemId", "B0036WT4KG");
 		params.put("ResponseGroup", "ItemAttributes,Offers,Images,Reviews");
 		String url = helper.sign(params);
 
