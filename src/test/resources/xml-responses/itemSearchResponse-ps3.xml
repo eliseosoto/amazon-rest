@@ -1,0 +1,1109 @@
+<ItemSearchResponse xmlns="http://webservices.amazon.com/AWSECommerceService/2009-11-01">
+	<OperationRequest>
+		<HTTPHeaders>
+			<Header Name="UserAgent" Value="Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_4; en-US) AppleWebKit/533.4 (KHTML, like Gecko) Chrome/5.0.375.99 Safari/533.4"></Header>
+		</HTTPHeaders>
+		<RequestId>6af1f832-842d-489a-bb6e-7bc5fa101848</RequestId>
+		<Arguments>
+			<Argument Name="Operation" Value="ItemSearch"></Argument>
+			<Argument Name="Service" Value="AWSECommerceService"></Argument>
+			<Argument Name="Signature" Value="qLgluzm0jGAcEffzQ6cTVciAPPMX6FvBrdzHlVyxIoE="></Argument>
+			<Argument Name="MerchantId" Value="All"></Argument>
+			<Argument Name="ItemPage" Value="1"></Argument>
+			<Argument Name="AssociateTag" Value="mywebsite-20"></Argument>
+			<Argument Name="Version" Value="2009-11-01"></Argument>
+			<Argument Name="Keywords" Value="ps3"></Argument>
+			<Argument Name="AWSAccessKeyId" Value="XXXXXXXXXXXXXXXXXXXX"></Argument>
+			<Argument Name="Timestamp" Value="2010-07-28T21:51:19Z"></Argument>
+			<Argument Name="ResponseGroup" Value="ItemAttributes"></Argument>
+			<Argument Name="SearchIndex" Value="All"></Argument>
+		</Arguments>
+		<RequestProcessingTime>0.0778250000000000</RequestProcessingTime>
+	</OperationRequest>
+	<Items>
+		<Request>
+			<IsValid>True</IsValid>
+			<ItemSearchRequest>
+				<Condition>New</Condition>
+				<DeliveryMethod>Ship</DeliveryMethod>
+				<ItemPage>1</ItemPage>
+				<Keywords>ps3</Keywords>
+				<MerchantId>All</MerchantId>
+				<ResponseGroup>ItemAttributes</ResponseGroup>
+				<ReviewSort>-SubmissionDate</ReviewSort>
+				<SearchIndex>All</SearchIndex>
+			</ItemSearchRequest>
+		</Request>
+		<TotalResults>23989</TotalResults>
+		<TotalPages>2399</TotalPages>
+		<Item>
+			<ASIN>B002I0J4VQ</ASIN>
+			<DetailPageURL>http://www.amazon.com/PlayStation-3-120-GB/dp/B002I0J4VQ%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002I0J4VQ
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/PlayStation-3-120-GB/dp/tech-data/B002I0J4VQ%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0J4VQ
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB002I0J4VQ%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0J4VQ
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB002I0J4VQ%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0J4VQ
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB002I0J4VQ%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0J4VQ
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B002I0J4VQ%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0J4VQ
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B002I0J4VQ%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0J4VQ
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B002I0J4VQ%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0J4VQ
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">60</AmazonMinimumAge>
+				<BatteriesIncluded>0</BatteriesIncluded>
+				<Binding>Video Game</Binding>
+				<Brand>Sony</Brand>
+				<CompatibleDevices>PlayStation3 (PS3)</CompatibleDevices>
+				<EAN>0711719802204</EAN>
+				<Edition>120 GB</Edition>
+				<Feature>HDMI + Bravia Sync functionality that provides both 1080p output resolution, and instant in-synch connectivity between your PS3 and other Sony HDMI enabled products without the use of
+					multiple remote controls.</Feature>
+				<Feature>A new 33% slimmer, 36% lighter PlayStation 3 entertainment system that is also more energy efficient.</Feature>
+				<Feature>Includes a Dualshock 3 wireless controller and a built-in 120GB HDD for storing games, music, videos, and photos.</Feature>
+				<Feature>Built-in Wi-Fi for connectivity anywhere and multiple media format compatibility, including Blu-ray for crystal clear video on High-Definition TVs, CD-ROM, DVD, and others.</Feature>
+				<Feature>Free membership and access to all the events, as well as game, movie, TV and other media content available on the PlayStation Network (PSN).</Feature>
+				<GraphicsMemorySize Units="MB">256</GraphicsMemorySize>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">1140</Height>
+					<Length Units="hundredths-inches">1140</Length>
+					<Weight Units="hundredths-pounds">1015</Weight>
+					<Width Units="hundredths-inches">256</Width>
+				</ItemDimensions>
+				<Label>Sony</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Unknown</Type>
+					</Language>
+					<Language>
+						<Name>English</Name>
+						<Type>Original Language</Type>
+					</Language>
+				</Languages>
+				<ListPrice>
+					<Amount>29999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$299.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Sony</Manufacturer>
+				<Model>711719801702</Model>
+				<MPN>711719801702</MPN>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">620</Height>
+					<Length Units="hundredths-inches">1340</Length>
+					<Weight Units="hundredths-pounds">1000</Weight>
+					<Width Units="hundredths-inches">1340</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>VIDEO_GAME_HARDWARE</ProductTypeName>
+				<Publisher>Sony</Publisher>
+				<ReleaseDate>2009-08-25</ReleaseDate>
+				<Studio>Sony</Studio>
+				<Title>PlayStation 3 120 GB</Title>
+				<TradeInValue>
+					<Amount>13450</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$134.50</FormattedPrice>
+				</TradeInValue>
+				<UPC>711719801702</UPC>
+				<Warranty>1 year warranty</Warranty>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B002I0H738</ASIN>
+			<DetailPageURL>http://www.amazon.com/PlayStation-3-250-GB/dp/B002I0H738%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB002I0H738
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/PlayStation-3-250-GB/dp/tech-data/B002I0H738%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0H738
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB002I0H738%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0H738
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB002I0H738%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0H738
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB002I0H738%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0H738
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B002I0H738%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0H738
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B002I0H738%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0H738
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B002I0H738%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB002I0H738
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<BatteriesIncluded>0</BatteriesIncluded>
+				<Binding>Video Game</Binding>
+				<Brand>Sony</Brand>
+				<CompatibleDevices>PlayStation3 (PS3)</CompatibleDevices>
+				<EAN>0711719802303</EAN>
+				<Edition>250 GB</Edition>
+				<ESRBAgeRating>Rating Pending</ESRBAgeRating>
+				<Feature>250GB HDD for storing games, music, videos, and photos</Feature>
+				<Feature>High-Definition Blu-ray player for the best movie experience</Feature>
+				<Feature>Free PlayStation Network membership</Feature>
+				<Feature>Plays DVDs and CDs</Feature>
+				<Feature>Internet ready with built-in Wi-Fi</Feature>
+				<Genre>action_games</Genre>
+				<GraphicsMemorySize Units="MB">256</GraphicsMemorySize>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">630</Height>
+					<Length Units="hundredths-inches">1339</Length>
+					<Weight Units="hundredths-pounds">992</Weight>
+					<Width Units="hundredths-inches">1339</Width>
+				</ItemDimensions>
+				<Label>Sony</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Unknown</Type>
+					</Language>
+					<Language>
+						<Name>English</Name>
+						<Type>Original Language</Type>
+					</Language>
+				</Languages>
+				<ListPrice>
+					<Amount>34999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$349.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Sony</Manufacturer>
+				<Model>98018</Model>
+				<MPN>98018</MPN>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">640</Height>
+					<Length Units="hundredths-inches">1340</Length>
+					<Weight Units="hundredths-pounds">972</Weight>
+					<Width Units="hundredths-inches">1340</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>VIDEO_GAME_HARDWARE</ProductTypeName>
+				<Publisher>Sony</Publisher>
+				<ReleaseDate>2009-11-03</ReleaseDate>
+				<Studio>Sony</Studio>
+				<Title>PlayStation 3 250 GB</Title>
+				<TradeInValue>
+					<Amount>13950</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$139.50</FormattedPrice>
+				</TradeInValue>
+				<UPC>411378164407</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B0015AARJI</ASIN>
+			<DetailPageURL>http://www.amazon.com/PlayStation-3-Dualshock-Wireless-Controller/dp/B0015AARJI%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB0015AARJI
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/PlayStation-3-Dualshock-Wireless-Controller/dp/tech-data/B0015AARJI%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0015AARJI
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB0015AARJI%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0015AARJI
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB0015AARJI%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0015AARJI
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB0015AARJI%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0015AARJI
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B0015AARJI%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0015AARJI
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B0015AARJI%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0015AARJI
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B0015AARJI%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB0015AARJI
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">204</AmazonMinimumAge>
+				<BatteriesIncluded>0</BatteriesIncluded>
+				<Binding>Video Game</Binding>
+				<Brand>Sony</Brand>
+				<Color>Black</Color>
+				<CompatibleDevices>PlayStation3 (PS3)</CompatibleDevices>
+				<EAN>0711719805007</EAN>
+				<Feature>Pressure sensors that rumble with each action making every impact feel like you're right in the game</Feature>
+				<Feature>Sixaxis highly sensitive motion technology senses your every move</Feature>
+				<Feature>Features Bluetooth technology for wireless game play</Feature>
+				<Feature>The PlayStation 3 system can support up to seven wireless controllers at one time</Feature>
+				<Feature>Can be charged at any time through the PlayStation 3 system using the controller's USB cable</Feature>
+				<FormFactor>External</FormFactor>
+				<Genre>Console</Genre>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">350</Height>
+					<Length Units="hundredths-inches">875</Length>
+					<Weight Units="hundredths-pounds">66</Weight>
+					<Width Units="hundredths-inches">575</Width>
+				</ItemDimensions>
+				<Label>Sony Computer Entertainment</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Original Language</Type>
+					</Language>
+				</Languages>
+				<LegalDisclaimer>We do not in any way represent that any part we sell is legal to possess in your jurisdiction. Check with you local authorities to ensure it is legal for you to possess before
+					buying!</LegalDisclaimer>
+				<ListPrice>
+					<Amount>5499</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$54.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Sony Computer Entertainment</Manufacturer>
+				<Model>98050</Model>
+				<MPN>SCPH-98050</MPN>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">390</Height>
+					<Length Units="hundredths-inches">900</Length>
+					<Weight Units="hundredths-pounds">70</Weight>
+					<Width Units="hundredths-inches">570</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>VIDEO_GAME_ACCESSORIES</ProductTypeName>
+				<Publisher>Sony Computer Entertainment</Publisher>
+				<ReleaseDate>2008-04-04</ReleaseDate>
+				<Studio>Sony Computer Entertainment</Studio>
+				<Title>PlayStation 3 Dualshock 3 Wireless Controller</Title>
+				<TradeInValue>
+					<Amount>950</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$9.50</FormattedPrice>
+				</TradeInValue>
+				<UPC>711719805007</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B000M17AVO</ASIN>
+			<DetailPageURL>http://www.amazon.com/Sony-PlayStation-3-Blu-ray-Disc-Remote/dp/B000M17AVO%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000M17AVO
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/Sony-PlayStation-3-Blu-ray-Disc-Remote/dp/tech-data/B000M17AVO%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000M17AVO
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB000M17AVO%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000M17AVO
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB000M17AVO%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000M17AVO
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB000M17AVO%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000M17AVO
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B000M17AVO%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000M17AVO
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B000M17AVO%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000M17AVO
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B000M17AVO%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000M17AVO
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">60</AmazonMinimumAge>
+				<BatteriesIncluded>1</BatteriesIncluded>
+				<BatteryDescription>2 AA</BatteryDescription>
+				<Binding>Accessory</Binding>
+				<Brand>Sony</Brand>
+				<Color>black</Color>
+				<CompatibleDevices>PlayStation3 (PS3)</CompatibleDevices>
+				<EAN>0711719804604</EAN>
+				<Feature>gives you streamlined access to the PS3's Blu-ray Disc functions</Feature>
+				<Feature>Bluetooth wireless technology</Feature>
+				<Feature>compatible with all versions of the PlayStation 3</Feature>
+				<Genre>Action Video Games</Genre>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">200</Height>
+					<Length Units="hundredths-inches">1125</Length>
+					<Weight Units="hundredths-pounds">54</Weight>
+					<Width Units="hundredths-inches">500</Width>
+				</ItemDimensions>
+				<Label>Sony Computer Entertainment</Label>
+				<LegalDisclaimer>Warranty does not cover misuse of product.</LegalDisclaimer>
+				<ListPrice>
+					<Amount>2499</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$24.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Sony Computer Entertainment</Manufacturer>
+				<MaterialType>Black Color</MaterialType>
+				<MaterialTypeSetElement>Black Color</MaterialTypeSetElement>
+				<MaterialTypeSetElement>Plastic</MaterialTypeSetElement>
+				<MaterialTypeSetElement>ps3</MaterialTypeSetElement>
+				<MaterialTypeSetElement>blu-ray</MaterialTypeSetElement>
+				<MaterialTypeSetElement>video games</MaterialTypeSetElement>
+				<Model>98046</Model>
+				<MPN>98046</MPN>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">200</Height>
+					<Length Units="hundredths-inches">1180</Length>
+					<Weight Units="hundredths-pounds">45</Weight>
+					<Width Units="hundredths-inches">490</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>VIDEO_GAME_ACCESSORIES</ProductTypeName>
+				<Publisher>Sony Computer Entertainment</Publisher>
+				<ReleaseDate>2007-01-09</ReleaseDate>
+				<Size>blue-ray remote control</Size>
+				<Studio>Sony Computer Entertainment</Studio>
+				<Title>Sony PlayStation 3 Blu-ray Disc Remote</Title>
+				<TradeInValue>
+					<Amount>325</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$3.25</FormattedPrice>
+				</TradeInValue>
+				<UPC>711719804604</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B003L56Z00</ASIN>
+			<DetailPageURL>http://www.amazon.com/Bundle-LittleBigPlanet-HDMI-Cable-Playstation-3/dp/B003L56Z00%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB003L56Z00
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/Bundle-LittleBigPlanet-HDMI-Cable-Playstation-3/dp/tech-data/B003L56Z00%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003L56Z00
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB003L56Z00%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003L56Z00
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB003L56Z00%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003L56Z00
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB003L56Z00%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003L56Z00
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B003L56Z00%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003L56Z00
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B003L56Z00%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003L56Z00
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B003L56Z00%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB003L56Z00
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<Binding>Video Game</Binding>
+				<Brand>Sony</Brand>
+				<EAN>0711719840909</EAN>
+				<Edition>250 GB Bundle</Edition>
+				<Feature>250GB HDD for storing games, music, videos, and photos</Feature>
+				<Feature>Includes LittleBigPlanet and an HDMI Cable</Feature>
+				<Feature>High-Definition Blu-ray player for the best movie experience</Feature>
+				<Feature>Free PlayStation Network membership</Feature>
+				<Feature>Internet ready with built-in Wi-Fi</Feature>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<Label>Sony</Label>
+				<ListPrice>
+					<Amount>34999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$349.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Sony</Manufacturer>
+				<Model>98409</Model>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">620</Height>
+					<Length Units="hundredths-inches">1350</Length>
+					<Weight Units="hundredths-pounds">1050</Weight>
+					<Width Units="hundredths-inches">1340</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>VIDEO_GAME_HARDWARE</ProductTypeName>
+				<Publisher>Sony</Publisher>
+				<ReleaseDate>2010-06-09</ReleaseDate>
+				<Studio>Sony</Studio>
+				<Title>PS3 250 GB Bundle (with LittleBigPlanet and HDMI Cable)</Title>
+				<TradeInValue>
+					<Amount>17500</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$175.00</FormattedPrice>
+				</TradeInValue>
+				<UPC>711719844709</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B001SGZL2W</ASIN>
+			<DetailPageURL>http://www.amazon.com/Red-Dead-Redemption-Playstation-3/dp/B001SGZL2W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB001SGZL2W
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/Red-Dead-Redemption-Playstation-3/dp/tech-data/B001SGZL2W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB001SGZL2W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB001SGZL2W%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB001SGZL2W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB001SGZL2W%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB001SGZL2W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB001SGZL2W%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB001SGZL2W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B001SGZL2W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB001SGZL2W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B001SGZL2W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB001SGZL2W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B001SGZL2W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB001SGZL2W
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">204</AmazonMinimumAge>
+				<BatteriesIncluded>0</BatteriesIncluded>
+				<Binding>Video Game</Binding>
+				<Brand>2K Games</Brand>
+				<EAN>0710425375736</EAN>
+				<Edition>Standard</Edition>
+				<ESRBAgeRating>Mature</ESRBAgeRating>
+				<Feature>The Dead Eye targeting mechanic, allowing the player to slow down time for shot accuracy, as well as ridable horses and more than 40 kinds of animals that you can hunt or be hunted by.
+				</Feature>
+				<Feature>Expansive open-world gameplay set in the final years of the American Wild West.</Feature>
+				<Feature>Massive play area filled with NPCs, made up 3 unique regions composed of towns and outposts filled with characters with varying looks, accents, etc.</Feature>
+				<Feature>Morality system based on honor and fame generated by the players actions throughout the game.</Feature>
+				<Feature>Western themed mini-games including showdowns, gambling, hunting bounties, cattle herding and five finger fillet; and an assortment of period specific weapons.</Feature>
+				<Genre>shooter_action_games</Genre>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">14</Height>
+					<Length Units="hundredths-inches">676</Length>
+					<Weight Units="hundredths-pounds">33</Weight>
+					<Width Units="hundredths-inches">534</Width>
+				</ItemDimensions>
+				<Label>Rockstar Games</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Unknown</Type>
+					</Language>
+				</Languages>
+				<LegalDisclaimer>We do not in any way represent that any part we sell is legal to possess in your jurisdiction. Check with you local authorities to ensure it is legal for you to possess before
+					buying!</LegalDisclaimer>
+				<ListPrice>
+					<Amount>5999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$59.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Rockstar Games</Manufacturer>
+				<Model>37573</Model>
+				<MPN>37573</MPN>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">60</Height>
+					<Length Units="hundredths-inches">670</Length>
+					<Weight Units="hundredths-pounds">25</Weight>
+					<Width Units="hundredths-inches">530</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>CONSOLE_VIDEO_GAMES</ProductTypeName>
+				<PublicationDate>2010-04-30</PublicationDate>
+				<Publisher>Rockstar Games</Publisher>
+				<ReleaseDate>2010-05-18</ReleaseDate>
+				<Studio>Rockstar Games</Studio>
+				<Title>Red Dead Redemption</Title>
+				<TradeInValue>
+					<Amount>2825</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$28.25</FormattedPrice>
+				</TradeInValue>
+				<UPC>710425378263</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B000ZK9QCS</ASIN>
+			<DetailPageURL>http://www.amazon.com/God-War-III-Playstation-3/dp/B000ZK9QCS%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000ZK9QCS
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/God-War-III-Playstation-3/dp/tech-data/B000ZK9QCS%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000ZK9QCS
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB000ZK9QCS%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000ZK9QCS
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB000ZK9QCS%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000ZK9QCS
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB000ZK9QCS%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000ZK9QCS
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B000ZK9QCS%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000ZK9QCS
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B000ZK9QCS%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000ZK9QCS
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B000ZK9QCS%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000ZK9QCS
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">204</AmazonMinimumAge>
+				<BatteriesIncluded>0</BatteriesIncluded>
+				<Binding>Video Game</Binding>
+				<Brand>Sony</Brand>
+				<EAN>0711719811121</EAN>
+				<Edition>Standard</Edition>
+				<ESRBAgeRating>Mature</ESRBAgeRating>
+				<Feature>True to the series roots, the four pillars of game play - brutal combat, intricate puzzles, exploration of awe-inspiring worlds, and a compelling story - all return.</Feature>
+				<Feature>God of War III is the epic conclusion to the Greek mythological trilogy, which will complete Kratos' story that began in the original title for the PlayStation 2.</Feature>
+				<Feature>New deadly weapons like the Cestus, powerful metal gauntlets with devastating strength, and other brutal instruments of war that open up ruthless new techniques.</Feature>
+				<Feature>The menacing creatures of Greek mythology can now be manipulated against their will, to cross chasms, inflict blind rage against enemies, reveal puzzles and secrets, and as tools of
+					complete annihilation.</Feature>
+				<Feature>God of War III picks up exactly where God of War II left off ? Kratos must take his quest for vengeance to the very stronghold of the Zeus.</Feature>
+				<Genre>fighting_action_games</Genre>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">59</Height>
+					<Length Units="hundredths-inches">672</Length>
+					<Weight Units="hundredths-pounds">26</Weight>
+					<Width Units="hundredths-inches">542</Width>
+				</ItemDimensions>
+				<Label>Sony Computer Entertainment</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Unknown</Type>
+					</Language>
+					<Language>
+						<Name>English</Name>
+						<Type>Subtitled</Type>
+					</Language>
+					<Language>
+						<Name>English</Name>
+						<Type>Original Language</Type>
+					</Language>
+					<Language>
+						<Name>English</Name>
+						<Type>Manual</Type>
+					</Language>
+				</Languages>
+				<LegalDisclaimer>We do not in any way represent that any part we sell is legal to possess in your jurisdiction. Check with you local authorities to ensure it is legal for you to possess before
+					buying!</LegalDisclaimer>
+				<ListPrice>
+					<Amount>5999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$59.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Sony Computer Entertainment</Manufacturer>
+				<Model>98111</Model>
+				<MPN>98111</MPN>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">80</Height>
+					<Length Units="hundredths-inches">690</Length>
+					<Weight Units="hundredths-pounds">20</Weight>
+					<Width Units="hundredths-inches">560</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>CONSOLE_VIDEO_GAMES</ProductTypeName>
+				<PublicationDate>2010-02-28</PublicationDate>
+				<Publisher>Sony Computer Entertainment</Publisher>
+				<ReleaseDate>2010-03-16</ReleaseDate>
+				<Studio>Sony Computer Entertainment</Studio>
+				<Title>God of War III</Title>
+				<TradeInValue>
+					<Amount>1725</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$17.25</FormattedPrice>
+				</TradeInValue>
+				<UPC>711719811121</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B00269QLH4</ASIN>
+			<DetailPageURL>http://www.amazon.com/Call-Duty-Modern-Warfare-Playstation-3/dp/B00269QLH4%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00269QLH4
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/Call-Duty-Modern-Warfare-Playstation-3/dp/tech-data/B00269QLH4%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269QLH4
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00269QLH4%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269QLH4
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00269QLH4%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269QLH4
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00269QLH4%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269QLH4
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B00269QLH4%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269QLH4
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B00269QLH4%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269QLH4
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B00269QLH4%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269QLH4
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">204</AmazonMinimumAge>
+				<BatteriesIncluded>0</BatteriesIncluded>
+				<Binding>Video Game</Binding>
+				<Brand>ACTIVISION</Brand>
+				<EAN>0047875837478</EAN>
+				<Edition>Standard</Edition>
+				<ESRBAgeRating>Mature</ESRBAgeRating>
+				<Feature>Epic single-player campaign picks up immediately following the thrilling events from Call of Duty 4: Modern Warfare</Feature>
+				<Feature>The definitive multiplayer experience returns, with a host of new perks and enhancements</Feature>
+				<Feature>New cooperative SpecOps mode, the perfect combination of Modern Warfare's single player intensity and the addictive replayability of its multiplayer</Feature>
+				<Feature>Special Ops Mode allows two players, either alone or with a friend, to engage in unique mission play and features split-screen functionality.</Feature>
+				<Feature>?Modern Warfare 2? contains new and updated weapons, new weapons attachments, and a variant of the multiplayer weapons customization system from ?Call of Duty 4?, now available in the
+					single player campaign.</Feature>
+				<Genre>strategy-game-genre</Genre>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">59</Height>
+					<Length Units="hundredths-inches">573</Length>
+					<Weight Units="hundredths-pounds">29</Weight>
+					<Width Units="hundredths-inches">674</Width>
+				</ItemDimensions>
+				<Label>Activision Inc.</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Unknown</Type>
+					</Language>
+				</Languages>
+				<ListPrice>
+					<Amount>5999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$59.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Activision Inc.</Manufacturer>
+				<Model>83747</Model>
+				<MPN>83747</MPN>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">60</Height>
+					<Length Units="hundredths-inches">670</Length>
+					<Weight Units="hundredths-pounds">5</Weight>
+					<Width Units="hundredths-inches">530</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>CONSOLE_VIDEO_GAMES</ProductTypeName>
+				<PublicationDate>2009-11</PublicationDate>
+				<Publisher>Activision Inc.</Publisher>
+				<ReleaseDate>2009-11-10</ReleaseDate>
+				<Studio>Activision Inc.</Studio>
+				<Title>Call of Duty: Modern Warfare 2</Title>
+				<TradeInValue>
+					<Amount>3300</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$33.00</FormattedPrice>
+				</TradeInValue>
+				<UPC>047875837478</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B00269DX5W</ASIN>
+			<DetailPageURL>http://www.amazon.com/Assassins-Creed-II-Playstation-3/dp/B00269DX5W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00269DX5W
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/Assassins-Creed-II-Playstation-3/dp/tech-data/B00269DX5W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269DX5W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB00269DX5W%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269DX5W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB00269DX5W%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269DX5W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB00269DX5W%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269DX5W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B00269DX5W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269DX5W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B00269DX5W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269DX5W
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B00269DX5W%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB00269DX5W
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">204</AmazonMinimumAge>
+				<Binding>Video Game</Binding>
+				<Brand>UBI Soft</Brand>
+				<EAN>0008888345343</EAN>
+				<Edition>Standard</Edition>
+				<ESRBAgeRating>Mature</ESRBAgeRating>
+				<Feature>Explore the deadly, shadowed world of the assassin with new assassin Ezio</Feature>
+				<Feature>Roam freely through the lush and dangerous world of Renaissance-era Italy</Feature>
+				<Feature>Do whatever it takes to complete your missions in the game's all-new open world and mission structure</Feature>
+				<Feature>Thrive in an environment rich with power, revenge and conspiracy</Feature>
+				<Feature>Practice your assassin's art with all-new weapons and instruments created by Leonardo da Vinci</Feature>
+				<Genre>action_games</Genre>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">60</Height>
+					<Length Units="hundredths-inches">675</Length>
+					<Weight Units="hundredths-pounds">24</Weight>
+					<Width Units="hundredths-inches">539</Width>
+				</ItemDimensions>
+				<Label>UBI Soft</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Unknown</Type>
+					</Language>
+				</Languages>
+				<ListPrice>
+					<Amount>3999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$39.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>UBI Soft</Manufacturer>
+				<Model>008888345343</Model>
+				<MPN>008888345343</MPN>
+				<NumberOfDiscs>1</NumberOfDiscs>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">60</Height>
+					<Length Units="hundredths-inches">670</Length>
+					<Weight Units="hundredths-pounds">15</Weight>
+					<Width Units="hundredths-inches">530</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>CONSOLE_VIDEO_GAMES</ProductTypeName>
+				<PublicationDate>2009-10-31</PublicationDate>
+				<Publisher>UBI Soft</Publisher>
+				<ReleaseDate>2009-11-17</ReleaseDate>
+				<Studio>UBI Soft</Studio>
+				<Title>Assassin's Creed II</Title>
+				<TradeInValue>
+					<Amount>1125</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$11.25</FormattedPrice>
+				</TradeInValue>
+				<UPC>008888240136</UPC>
+			</ItemAttributes>
+		</Item>
+		<Item>
+			<ASIN>B000FQ2D5E</ASIN>
+			<DetailPageURL>http://www.amazon.com/Metal-Gear-Solid-Patriots-Playstation-3/dp/B000FQ2D5E%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB000FQ2D5E
+			</DetailPageURL>
+			<ItemLinks>
+				<ItemLink>
+					<Description>Technical Details</Description>
+					<URL>http://www.amazon.com/Metal-Gear-Solid-Patriots-Playstation-3/dp/tech-data/B000FQ2D5E%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000FQ2D5E
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Baby Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/baby/add-item.html%3Fasin.0%3DB000FQ2D5E%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000FQ2D5E
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wedding Registry</Description>
+					<URL>http://www.amazon.com/gp/registry/wedding/add-item.html%3Fasin.0%3DB000FQ2D5E%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000FQ2D5E
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Add To Wishlist</Description>
+					<URL>http://www.amazon.com/gp/registry/wishlist/add-item.html%3Fasin.0%3DB000FQ2D5E%26SubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000FQ2D5E
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>Tell A Friend</Description>
+					<URL>http://www.amazon.com/gp/pdp/taf/B000FQ2D5E%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000FQ2D5E
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Customer Reviews</Description>
+					<URL>http://www.amazon.com/review/product/B000FQ2D5E%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000FQ2D5E
+					</URL>
+				</ItemLink>
+				<ItemLink>
+					<Description>All Offers</Description>
+					<URL>http://www.amazon.com/gp/offer-listing/B000FQ2D5E%3FSubscriptionId%3D1Y8NC1MDWFVG8XQ35HR2%26tag%3Dsupervacacom-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D386001%26creativeASIN%3DB000FQ2D5E
+					</URL>
+				</ItemLink>
+			</ItemLinks>
+			<ItemAttributes>
+				<AmazonMaximumAge Units="months">240</AmazonMaximumAge>
+				<AmazonMinimumAge Units="months">204</AmazonMinimumAge>
+				<BatteriesIncluded>0</BatteriesIncluded>
+				<Binding>Video Game</Binding>
+				<Brand>Konami/ Kojima Productions</Brand>
+				<EAN>0083717201748</EAN>
+				<ESRBAgeRating>Mature</ESRBAgeRating>
+				<Feature>Although little is known, MGS4 is being touted as the final installment in the Metal Gear Solid series.</Feature>
+				<Feature>Chameleon-like camouflage system, Octacamo, blends Snake into his surroundings.</Feature>
+				<Feature>Loads of characters from previous Metal Gear Solid installments will return in this final chapter.</Feature>
+				<Feature>Slated for simultaneous worldwide release in June 2008, Konami has released very few details about MGS4.</Feature>
+				<Feature>Built for the PS3, the game is expected to be the finest representation of the console's graphics</Feature>
+				<Genre>shooter_action_games</Genre>
+				<HardwarePlatform>Playstation 3</HardwarePlatform>
+				<IsAutographed>0</IsAutographed>
+				<IsEligibleForTradeIn>1</IsEligibleForTradeIn>
+				<IsMemorabilia>0</IsMemorabilia>
+				<ItemDimensions>
+					<Height Units="hundredths-inches">58</Height>
+					<Length Units="hundredths-inches">666</Length>
+					<Weight Units="hundredths-pounds">30</Weight>
+					<Width Units="hundredths-inches">522</Width>
+				</ItemDimensions>
+				<Label>Konami</Label>
+				<Languages>
+					<Language>
+						<Name>English</Name>
+						<Type>Unknown</Type>
+					</Language>
+					<Language>
+						<Name>English</Name>
+						<Type>Original Language</Type>
+					</Language>
+				</Languages>
+				<ListPrice>
+					<Amount>2999</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$29.99</FormattedPrice>
+				</ListPrice>
+				<Manufacturer>Konami</Manufacturer>
+				<Model>20160</Model>
+				<MPN>20160</MPN>
+				<NumberOfItems>1</NumberOfItems>
+				<OperatingSystem>PlayStation 3</OperatingSystem>
+				<PackageDimensions>
+					<Height Units="hundredths-inches">80</Height>
+					<Length Units="hundredths-inches">690</Length>
+					<Weight Units="hundredths-pounds">45</Weight>
+					<Width Units="hundredths-inches">570</Width>
+				</PackageDimensions>
+				<PackageQuantity>1</PackageQuantity>
+				<Platform>PlayStation 3</Platform>
+				<ProductGroup>Video Games</ProductGroup>
+				<ProductTypeName>CONSOLE_VIDEO_GAMES</ProductTypeName>
+				<PublicationDate>2008-06</PublicationDate>
+				<Publisher>Konami</Publisher>
+				<ReleaseDate>2008-06-12</ReleaseDate>
+				<SpecialFeatures>DualShock</SpecialFeatures>
+				<SpecialFeatures>Vibration</SpecialFeatures>
+				<Studio>Konami</Studio>
+				<Title>Metal Gear Solid 4: Guns of the Patriots</Title>
+				<TradeInValue>
+					<Amount>525</Amount>
+					<CurrencyCode>USD</CurrencyCode>
+					<FormattedPrice>$5.25</FormattedPrice>
+				</TradeInValue>
+				<UPC>083717201601</UPC>
+			</ItemAttributes>
+		</Item>
+	</Items>
+</ItemSearchResponse>
