@@ -15,7 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.supervaca.amazonrest.domain.Item;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration( { "/applicationContext.xml" })
+@ContextConfiguration({ "/applicationContext.xml" })
 public class ItemDaoRestIntegrationTest extends AbstractJUnit4SpringContextTests {
 	private static final Logger logger = LoggerFactory.getLogger(ItemDaoRestIntegrationTest.class);
 	private ItemDao itemDao;
@@ -31,14 +31,14 @@ public class ItemDaoRestIntegrationTest extends AbstractJUnit4SpringContextTests
 
 		logger.debug(item.toString());
 	}
-	
+
 	@Test
 	public final void testNoPrice() {
 		Item item = itemDao.lookup("B000PMLFRA", Arrays.asList(new String[] { "ItemAttributes", "Offers", "OfferSummary" }), true);
 
 		logger.debug(item.toString());
 	}
-	
+
 	@Test
 	public final void testCantShowPrice() {
 		Item item = itemDao.lookup("B0036WT4KG", Arrays.asList(new String[] { "ItemAttributes", "Offers", "OfferSummary" }), true);
@@ -60,7 +60,7 @@ public class ItemDaoRestIntegrationTest extends AbstractJUnit4SpringContextTests
 	public final void testSearchItems() {
 		List<String> responseGroups = Arrays.asList(new String[] { "ItemAttributes" });
 		SearchItemsResults searchResponse = itemDao.searchItems("ps3", responseGroups, "All", 1, false);
-		
+
 		List<Item> items = searchResponse.getItems();
 
 		logger.debug("Found {} items", items.size());

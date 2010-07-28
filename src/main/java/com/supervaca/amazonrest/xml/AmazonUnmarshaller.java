@@ -12,6 +12,7 @@ import javax.xml.stream.events.XMLEvent;
 import javax.xml.transform.stream.StreamSource;
 
 import com.supervaca.amazonrest.dao.SearchItemsResults;
+import com.supervaca.amazonrest.domain.Error;
 import com.supervaca.amazonrest.domain.Item;
 import com.supervaca.amazonrest.domain.ItemAttributes;
 import com.supervaca.amazonrest.domain.Merchant;
@@ -20,6 +21,7 @@ import com.supervaca.amazonrest.domain.OfferListing;
 import com.supervaca.amazonrest.domain.OfferSummary;
 import com.supervaca.amazonrest.domain.Offers;
 import com.supervaca.amazonrest.domain.Price;
+import com.supervaca.amazonrest.exception.ItemLookupException;
 
 public class AmazonUnmarshaller {
 	public static boolean isStartElementEqual(XMLEvent event, String startElement) {
@@ -38,6 +40,12 @@ public class AmazonUnmarshaller {
 		// Read the XML document
 		while (eventReader.hasNext()) {
 			XMLEvent event = eventReader.nextEvent();
+			
+			if (AmazonUnmarshaller.isStartElementEqual(event, "Error")) {
+				Error error = AmazonUnmarshaller.unmarshalError(eventReader);
+				String messageFormat = String.format("Couldn't complete ItemLookup [Code: %s, Message: %s]", error.getCode(), error.getMessage());
+				throw new ItemLookupException(messageFormat); 
+			}
 
 			if (AmazonUnmarshaller.isStartElementEqual(event, "Item")) {
 				retVal = AmazonUnmarshaller.unmarshalItem(eventReader);
@@ -45,6 +53,27 @@ public class AmazonUnmarshaller {
 			}
 		}
 		return retVal;
+	}
+	
+	public static Error unmarshalError(XMLEventReader eventReader) throws XMLStreamException {
+		Error error = new Error();
+		while (eventReader.hasNext()) {
+			XMLEvent errorEvent = eventReader.nextEvent();
+
+			if (AmazonUnmarshaller.isStartElementEqual(errorEvent, "Code")) {
+				errorEvent = eventReader.nextEvent();
+				error.setCode(errorEvent.asCharacters().getData());
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(errorEvent, "Message")) {
+				errorEvent = eventReader.nextEvent();
+				error.setMessage(errorEvent.asCharacters().getData());
+				continue;
+			}
+
+		}
+		return error;
 	}
 
 	public static List<Item> unmarshalMultiItemLookup(StreamSource xmlStream) throws FactoryConfigurationError, XMLStreamException {
