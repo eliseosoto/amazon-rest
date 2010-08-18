@@ -78,7 +78,7 @@ public interface ItemDao {
 	 * @param keyword
 	 * @return
 	 */
-	List<Item> searchItems(String keyword);
+	List<Item> searchItems(String keywords);
 
 	/**
 	 * Searches items by keyword in all categories and the specified Response
@@ -88,7 +88,7 @@ public interface ItemDao {
 	 * @param responseGroups
 	 * @return
 	 */
-	List<Item> searchItems(String keyword, List<String> responseGroups);
+	List<Item> searchItems(String keywords, List<String> responseGroups);
 
 	/**
 	 * Searches items by keyword in all categories and the specified Search
@@ -98,7 +98,7 @@ public interface ItemDao {
 	 * @param searchIndex
 	 * @return
 	 */
-	SearchItemsResults searchItems(String keyword, String searchIndex);
+	SearchItemsResults searchItems(String keywords, String searchIndex);
 
 	/**
 	 * Searches items by keyword in all categories and the specified Search

@@ -117,27 +117,25 @@ public class ItemDaoRest implements ItemDao {
 	}
 
 	@Override
-	public List<Item> searchItems(String keyword) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Item> searchItems(String keywords) {
+		List<String> responseGroups = Arrays.asList(new String[] { "ItemAttributes" });
+		return searchItems(keywords, responseGroups);
 	}
 
 	@Override
-	public List<Item> searchItems(String keyword, List<String> responseGroups) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Item> searchItems(String keywords, List<String> responseGroups) {
+		return searchItems(keywords, responseGroups, "All").getItems();
 	}
 
 	@Override
-	public SearchItemsResults searchItems(String keyword, String searchIndex) {
-		// TODO Auto-generated method stub
-		return null;
+	public SearchItemsResults searchItems(String keywords, String searchIndex) {
+		List<String> responseGroups = Arrays.asList(new String[] { "ItemAttributes" });
+		return searchItems(keywords, responseGroups, searchIndex);
 	}
 
 	@Override
 	public SearchItemsResults searchItems(String keywords, List<String> responseGroups, String searchIndex) {
-		// TODO Auto-generated method stub
-		return null;
+		return searchItems(keywords, responseGroups, searchIndex, 1, false);
 	}
 
 	@Override
