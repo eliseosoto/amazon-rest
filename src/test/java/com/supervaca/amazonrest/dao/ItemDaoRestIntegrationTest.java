@@ -69,4 +69,14 @@ public class ItemDaoRestIntegrationTest extends AbstractJUnit4SpringContextTests
 			logger.debug(item.getItemAttributes().getTitle());
 		}
 	}
+	
+	@Test
+	public final void testSearchItemsDefault() {
+		List<Item> items = itemDao.searchItems("google+app+engine");
+
+		logger.debug("Found {} items", items.size());
+		for (Item item : items) {
+			logger.debug(item.getItemAttributes().getTitle());
+		}
+	}
 }

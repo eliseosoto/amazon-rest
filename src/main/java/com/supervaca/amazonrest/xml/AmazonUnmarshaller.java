@@ -13,6 +13,7 @@ import javax.xml.transform.stream.StreamSource;
 
 import com.supervaca.amazonrest.dao.SearchItemsResults;
 import com.supervaca.amazonrest.domain.Error;
+import com.supervaca.amazonrest.domain.Image;
 import com.supervaca.amazonrest.domain.Item;
 import com.supervaca.amazonrest.domain.ItemAttributes;
 import com.supervaca.amazonrest.domain.Merchant;
@@ -142,10 +143,34 @@ public class AmazonUnmarshaller {
 				item.setDetailPageURL(itemEvent.asCharacters().getData());
 				continue;
 			}
+			
+			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "SmallImage")) {
+				Image image = AmazonUnmarshaller.unmarshalImage(eventReader, "SmallImage");
+				item.setSmallImage(image);
+				continue;
+			}
+			
+			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "MediumImage")) {
+				Image image = AmazonUnmarshaller.unmarshalImage(eventReader, "MediumImage");
+				item.setMediumImage(image);
+				continue;
+			}
+			
+			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "LargeImage")) {
+				Image image = AmazonUnmarshaller.unmarshalImage(eventReader, "LargeImage");
+				item.setLargeImage(image);
+				continue;
+			}
+			
+			// TODO: Skip ImageSets for now
+			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "ImageSets")) {
+				while(!AmazonUnmarshaller.isEndElementEqual(itemEvent, "ImageSets")) {
+					itemEvent = eventReader.nextEvent();
+				}
+			}
 
 			if (AmazonUnmarshaller.isStartElementEqual(itemEvent, "ItemAttributes")) {
 				ItemAttributes itemAttributes = AmazonUnmarshaller.unmarshalItemAttributes(eventReader);
-				;
 				item.setItemAttributes(itemAttributes);
 			}
 
@@ -364,5 +389,31 @@ public class AmazonUnmarshaller {
 			}
 		}
 		return price;
+	}
+	
+	public static Image unmarshalImage(XMLEventReader eventReader, String imageName) throws XMLStreamException {
+		Image image = new Image();
+		while (eventReader.hasNext() && !(AmazonUnmarshaller.isEndElementEqual(eventReader.peek(), imageName))) {
+			XMLEvent imageEvent = eventReader.nextEvent();
+
+			if (AmazonUnmarshaller.isStartElementEqual(imageEvent, "URL")) {
+				imageEvent = eventReader.nextEvent();
+				image.setUrl(imageEvent.asCharacters().getData());
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(imageEvent, "Height")) {
+				imageEvent = eventReader.nextEvent();
+				image.setHeight(Integer.parseInt(imageEvent.asCharacters().getData()));
+				continue;
+			}
+
+			if (AmazonUnmarshaller.isStartElementEqual(imageEvent, "Width")) {
+				imageEvent = eventReader.nextEvent();
+				image.setWidth(Integer.parseInt(imageEvent.asCharacters().getData()));
+				continue;
+			}
+		}
+		return image;
 	}
 }

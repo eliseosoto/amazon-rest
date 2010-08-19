@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.supervaca.amazonrest</groupId>
 	<artifactId>amazon-rest</artifactId>
-	<version>0.2.1-SNAPSHOT</version>
+	<version>0.2.2-SNAPSHOT</version>
 	<name>amazon-rest Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 

@@ -6,6 +6,9 @@ public class Item {
 	private ItemAttributes itemAttributes;
 	private OfferSummary offerSummary;
 	private Offers offers;
+	private Image smallImage;
+	private Image mediumImage;
+	private Image largeImage;
 
 	public String getAsin() {
 		return asin;
@@ -47,11 +50,36 @@ public class Item {
 		this.offers = offers;
 	}
 
+	public Image getSmallImage() {
+		return smallImage;
+	}
+
+	public void setSmallImage(Image smallImage) {
+		this.smallImage = smallImage;
+	}
+
+	public Image getMediumImage() {
+		return mediumImage;
+	}
+
+	public void setMediumImage(Image mediumImage) {
+		this.mediumImage = mediumImage;
+	}
+
+	public Image getLargeImage() {
+		return largeImage;
+	}
+
+	public void setLargeImage(Image largeImage) {
+		this.largeImage = largeImage;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Item [asin=").append(asin).append(", detailPageURL=").append(detailPageURL).append(", itemAttributes=").append(itemAttributes).append(", offerSummary=").append(offerSummary)
-				.append(", offers=").append(offers).append("]");
+		builder.append("Item [asin=").append(asin).append(", detailPageURL=").append(detailPageURL).append(", itemAttributes=")
+				.append(itemAttributes).append(", offerSummary=").append(offerSummary).append(", offers=").append(offers).append(", smallImage=")
+				.append(smallImage).append(", mediumImage=").append(mediumImage).append(", largeImage=").append(largeImage).append("]");
 		return builder.toString();
 	}
 }
